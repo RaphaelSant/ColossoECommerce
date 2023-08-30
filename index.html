@@ -4,16 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Colosso E-Commerce</title>
 </head>
 <body>
-  <header></header>
-  <main>
-    <section id="container-produto">
-      
-    </section>
-  </main>
 
-  <script src="./main.js"></script>
+  <!-- Carrinho Início -->
+  <section id="carrinho" class="fixed top-0 bg-indigo-950 h-screen w-[360px] right-[0px] text-slate-200">
+    <div id="cabecalho-carrinho" class="flex justify-between m-4">
+      <p>Meu carrinho</p>
+      <button id="fechar-carrinho">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+    <section id="produtos-carrinho">
+      <p>Camisa larga com bolsos</p>
+      <p>Casaco reto com Lã</p>
+      <p>Jaqueta com efeito borboleta</p>
+    </section>
+    <p id="preco-total">R$ 200</p>
+    <button class="bg-slate-200 text-slate-900 p-1">Finalizar Compra</button>
+  </section>
+  <!-- Carrinho Fim -->
+
+  <!-- NavBar Início -->
+  <header class="flex bg-indigo-950 p-2 justify-between">
+    <img class="h-16" src="./assets/logo/hashtag.svg" alt="Logo do Magazine HashTag">
+    <div class="text-slate-200 flex gap-2 items-end mx-2">
+      <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping"></i></button>
+      <button><i class="fa-solid fa-user"></i></button>
+    </div>
+  </header>
+  <!-- NavBar Fim -->
+
+  <!-- Conteudo Início -->
+  <main>
+    <section class="flex flex-wrap" id="container-produto"></section>
+  </main>
+  <!-- Conteudo Fim -->
+
+  <!-- Chamada do Script JS com o atributo [type="module"] que permite a modularização (importação de outros arquivos .js no main do projeto) no JS -->
+  <script type="module" src="./main.js"></script>
+
 </body>
 </html>

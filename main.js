@@ -1,3 +1,6 @@
+// Para trabalhar com modulos, deve-se adicionar o atributo ao Script Main [type: "module"]
+import { inicializarCarrinho } from "./src/menuCarrinho";
+
 const catalogo = [
   {
     id: 1,
@@ -66,16 +69,18 @@ const catalogo = [
 ];
 
 for (let i = 0; i < catalogo.length; i++) {
-  const cartaoProduto = `<div id="card-produto-1">
+  const cartaoProduto = `<div class="border-solid border-2 border-sky-500 w-48 m-2" id="card-produto-${catalogo[i].id}">
     <img 
     src="./assets/img/${catalogo[i].imagem}" 
     alt="Produto 1 do Colosso Megazine."
     style="height: 300px;"
     />
-    <p>${catalogo[i].marca}</p>
+    <p class="marca">${catalogo[i].marca}</p>
     <p>${catalogo[i].nome}</p>
     <p>R$ ${catalogo[i].preco}</p>
     <button>Adicionar</button>
     </div>`;
   document.getElementById("container-produto").innerHTML += cartaoProduto;
 }
+
+inicializarCarrinho();
