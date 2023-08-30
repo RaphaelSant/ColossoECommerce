@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Colosso E-Commerce</title>
 </head>
-<body>
+<body class="bg-stone-200 flex flex-col">
 
   <!-- Carrinho Início -->
-  <section id="carrinho" class="fixed top-0 bg-indigo-950 h-screen w-[360px] right-[0px] text-slate-200">
+  <section id="carrinho" class="fixed top-0 bg-slate-950 h-screen w-[360px] right-[-360px] text-slate-200 z-50">
     <div id="cabecalho-carrinho" class="flex justify-between m-4">
       <p>Meu carrinho</p>
       <button id="fechar-carrinho">
@@ -28,18 +28,18 @@
   <!-- Carrinho Fim -->
 
   <!-- NavBar Início -->
-  <header class="flex bg-indigo-950 p-2 justify-between">
+  <header class="flex bg-slate-950 px-8 py-4 justify-between sticky top-0 shadow-xl shadow-slate-400 text-xl">
     <img class="h-16" src="./assets/logo/hashtag.svg" alt="Logo do Magazine HashTag">
     <div class="text-slate-200 flex gap-2 items-end mx-2">
-      <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping"></i></button>
-      <button><i class="fa-solid fa-user"></i></button>
+      <button id="abrir-carrinho" class="mx-2"><i class="fa-solid fa-cart-shopping"></i></button>
+      <button class="mr-2"><i class="fa-solid fa-user"></i></button>
     </div>
   </header>
   <!-- NavBar Fim -->
 
   <!-- Conteudo Início -->
   <main>
-    <section class="flex flex-wrap" id="container-produto"></section>
+    <section class="flex flex-wrap p-10 justify-center gap-10" id="container-produto"></section>
   </main>
   <!-- Conteudo Fim -->
 
